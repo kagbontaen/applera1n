@@ -169,9 +169,9 @@ def boot_fakefs():
 def icloudbypassios16():
 
     showinfo('bypass!', 'We will now bypass your device! please jailbreak first with palera1n C!')
-    if system_name == "posix":
+    if system_name.lower() == "darwin":
         os.system("bash ./device/Darwin/bypass.sh")
-    elif system_name == "darwin":
+    elif system_name.lower() == "posix":
         os.system("bash ./device/Linux/bypass.sh")
 
     print("Device is bypassed\n")
